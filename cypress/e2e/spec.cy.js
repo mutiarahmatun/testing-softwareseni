@@ -7,7 +7,11 @@ describe('Software Seni Site Test', () => {
     cy.title().should('contain', 'Softwareseni')
 
     // Search for "Angkasa Pura - SSO" content on the page
-    cy.contains('Angkasa Pura - SSO').click()
+    cy.contains('Angkasa Pura - SSO')
+
+    // cy.get('[class=rv-button-text-with-icon]').click()
+
+    cy.get('a[href*="angkasa-pura-sso"]').click()
 
     // Check the title of the new page
     cy.title().should('contain', 'Angkasa Pura - SSO')
